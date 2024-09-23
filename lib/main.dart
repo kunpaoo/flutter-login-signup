@@ -23,8 +23,8 @@ class MainApp extends StatelessWidget {
         },
         color: Color.fromARGB(1, 25, 116, 255),
         theme: ThemeData(
-          scaffoldBackgroundColor: Color.fromRGBO(25, 116, 255, 1),
-          primaryColor: Color.fromRGBO(25, 116, 255, 1),
+          scaffoldBackgroundColor: Color.fromRGBO(255, 255, 255, 1),
+          primaryColor: Color.fromRGBO(255, 255, 255, 1),
         ));
   }
 }
