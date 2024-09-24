@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:midterms/screens/home.dart';
 import 'package:midterms/screens/landing.dart';
 import 'package:midterms/screens/login.dart';
@@ -25,6 +26,7 @@ class MainApp extends StatelessWidget {
         theme: ThemeData(
           scaffoldBackgroundColor: Color.fromRGBO(255, 255, 255, 1),
           primaryColor: Color.fromRGBO(255, 255, 255, 1),
+          textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
         ));
   }
 }
