@@ -20,17 +20,18 @@ dev_dependencies:
   flutter_lints: ^4.0.0
   flutter_launcher_icons: "^0.14.0"
 
-assets: "/assets"
-
 flutter:
   uses-material-design: true
   assets:
     - assets/khun.png
     - assets/cat_logo.png
+    - assets/logo.png
 
 flutter_launcher_icons:
   image_path: "assets/logo.png"
-  android: "logo.png"
+  android: "logo"
+  adaptive_icon_background: "assets/background.png"
+  adaptive_icon_foreground: "assets/foreground.png"
   ios: true
   web:
     generate: true

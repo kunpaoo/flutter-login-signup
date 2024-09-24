@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:midterms/screens/login.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -44,7 +43,7 @@ class DesktopWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Image.asset('assets/cat_logo.png', width: 350, height: 350),
+          Image.asset('assets/logo.png', width: 350, height: 350),
           LoginInterface(primary: primary)
         ],
       ),

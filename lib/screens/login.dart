@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-import '../social_icons.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
   @override
@@ -44,7 +41,7 @@ class DesktopWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Image.asset('assets/cat_logo.png',
+          Image.asset('assets/logo.png',
               width: 350, // Set the desired width
               height: 350),
           LoginInterface(primary: primary)
