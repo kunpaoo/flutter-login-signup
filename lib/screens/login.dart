@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
-
   @override
   Widget build(BuildContext context) {
     // Size size = MediaQuery.of(context).size;
@@ -10,6 +10,7 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Container(
+<<<<<<< HEAD
           width: 400,
           height: 500,
           padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 50),
@@ -18,12 +19,23 @@ class LoginPage extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.center,
+=======
+          width: 600,
+          height: 500,
+          padding: const EdgeInsets.all(20),
+          decoration: BoxDecoration(
+              color: Colors.white,
+              border: Border.all(color: Colors.black),
+              borderRadius: BorderRadius.circular(10)),
+          child: Column(
+>>>>>>> 06c53ded3a14b4b3e11a090db67f68c247c2ced5
             children: [
               Text(
                 "Login here",
                 style: TextStyle(
                     fontSize: 25, fontWeight: FontWeight.w900, color: primary),
               ),
+<<<<<<< HEAD
               const SizedBox(height: 20),
               const SizedBox(
                 width: 200,
@@ -65,6 +77,15 @@ class LoginPage extends StatelessWidget {
               ),
               SizedBox(height: 50),
               const Text("Socials")
+=======
+              Text("Description"),
+              Text("Username"),
+              Text("Email"),
+              Text("Submit"),
+              Text("Forgot Password"),
+              Text("Socials"),
+              SocialIconsWidget(),
+>>>>>>> 06c53ded3a14b4b3e11a090db67f68c247c2ced5
             ],
           ),
         ),
@@ -97,4 +118,32 @@ class LoginPage extends StatelessWidget {
       ),
     );
   }
+}
+
+class SocialIconsWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        buildIcon(FontAwesomeIcons.facebook),
+        SizedBox(width: 10),
+        buildIcon(FontAwesomeIcons.google),
+        SizedBox(width: 10),
+        buildIcon(
+          FontAwesomeIcons.apple,
+        ),
+      ],
+    );
+  }
+}
+
+Widget buildIcon(IconData iconData) {
+  return RawMaterialButton(
+    onPressed: () {},
+    padding: EdgeInsets.fromLTRB(0, 11, 0, 11),
+    fillColor: Color.fromRGBO(236, 236, 236, 1),
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+    child: Icon(iconData, color: Colors.black),
+  );
 }
