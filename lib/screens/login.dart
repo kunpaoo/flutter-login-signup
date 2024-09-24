@@ -5,12 +5,12 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    // Size size = MediaQuery.of(context).size;
     Color primary = const Color.fromRGBO(31, 65, 187, 1);
     return Scaffold(
       body: Center(
         child: Container(
-          width: size.width * 0.8,
+          width: 400,
           height: 500,
           padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 50),
           decoration: BoxDecoration(
@@ -81,6 +81,8 @@ class LoginPage extends StatelessWidget {
             contentPadding: EdgeInsets.all(15),
             labelText: label,
             labelStyle: TextStyle(fontSize: 13),
+            floatingLabelStyle:
+                TextStyle(color: Color.fromRGBO(31, 65, 187, 1)),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
               borderSide: const BorderSide(
@@ -91,8 +93,7 @@ class LoginPage extends StatelessWidget {
             fillColor: const Color.fromRGBO(241, 244, 255, 1),
             filled: true,
             focusedBorder: const OutlineInputBorder(
-                borderSide:
-                    BorderSide(color: Color.fromRGBO(25, 116, 255, 1)))),
+                borderSide: BorderSide(color: Color.fromRGBO(31, 65, 187, 1)))),
       ),
     );
   }
