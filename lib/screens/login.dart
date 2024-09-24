@@ -106,7 +106,7 @@ class LoginInterface extends StatelessWidget {
             SizedBox(height: 20),
             MaterialButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/home');
+                Navigator.popAndPushNamed(context, '/home');
               },
               color: primary,
               minWidth: double.infinity,
