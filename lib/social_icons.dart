@@ -4,15 +4,19 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class SocialIconsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+    return Column(
       children: [
-        buildIcon(FontAwesomeIcons.facebook),
-        SizedBox(width: 10),
-        buildIcon(FontAwesomeIcons.google),
-        SizedBox(width: 10),
-        buildIcon(
-          FontAwesomeIcons.apple,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            buildIcon(FontAwesomeIcons.facebook),
+            SizedBox(width: 10),
+            buildIcon(FontAwesomeIcons.google),
+            SizedBox(width: 10),
+            buildIcon(
+              FontAwesomeIcons.apple,
+            ),
+          ],
         ),
       ],
     );

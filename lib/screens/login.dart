@@ -120,7 +120,14 @@ class LoginInterface extends StatelessWidget {
               ),
             ),
             SizedBox(height: 50),
-            const Text("Socials"),
+            Text(
+              "or continue with",
+              style: TextStyle(
+                  color: Color.fromRGBO(31, 65, 187, 1),
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 10),
             SocialIconsWidget(),
           ],
         ),
