@@ -89,8 +89,8 @@ class DesktopWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.network(
-                    'https://cdn.discordapp.com/attachments/1182699837611847763/1287792802109063188/download-removebg-preview.png?ex=66f2d602&is=66f18482&hm=e8a3e0fa23107b3cd7f7b2112a6a8d00d105a8793617c49b137c9fee27748b9e&'),
+                Image.asset('khun.png'),
+                SizedBox(width: 250),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -106,7 +106,7 @@ class DesktopWidget extends StatelessWidget {
                     Row(children: [
                       RawMaterialButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, '/login');
+                          Navigator.pushNamed(context, '/home');
                         },
                         fillColor: Color.fromRGBO(22, 54, 169, 1),
                         shape: RoundedRectangleBorder(
