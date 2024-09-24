@@ -24,14 +24,9 @@ class MainApp extends StatelessWidget {
         },
         color: Color.fromARGB(1, 25, 116, 255),
         theme: ThemeData(
-<<<<<<< HEAD
-          textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
-          scaffoldBackgroundColor: Colors.grey[100],
-          primaryColor: Color.fromRGBO(25, 116, 255, 1),
-=======
           scaffoldBackgroundColor: Color.fromRGBO(255, 255, 255, 1),
           primaryColor: Color.fromRGBO(255, 255, 255, 1),
->>>>>>> 06c53ded3a14b4b3e11a090db67f68c247c2ced5
+          textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
         ));
   }
 }
