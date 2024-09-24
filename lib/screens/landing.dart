@@ -106,7 +106,7 @@ class DesktopWidget extends StatelessWidget {
                     Row(children: [
                       RawMaterialButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, '/home');
+                          Navigator.pushNamed(context, '/login');
                         },
                         fillColor: Color.fromRGBO(22, 54, 169, 1),
                         shape: RoundedRectangleBorder(
