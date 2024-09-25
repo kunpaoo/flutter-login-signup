@@ -62,6 +62,7 @@ class LoginInterface extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
+        child: SingleChildScrollView(
       child: Container(
         width: 400,
         height: 600,
@@ -129,7 +130,7 @@ class LoginInterface extends StatelessWidget {
           ],
         ),
       ),
-    );
+    ));
   }
 }
 

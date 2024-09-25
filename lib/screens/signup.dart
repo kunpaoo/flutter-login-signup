@@ -131,7 +131,7 @@ class LoginInterface extends StatelessWidget {
                   "Already have an account",
                   style: TextStyle(color: Colors.grey),
                 )),
-            SizedBox(height: 50),
+            SizedBox(height: 20),
             Text(
               "or continue with",
               style: TextStyle(
