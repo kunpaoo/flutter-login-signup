@@ -5,11 +5,13 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: Center(
-      child: Image.asset('assets/logo.png',
-          width: 350, // Set the desired width
-          height: 350),
-    ));
+    return Scaffold(
+      body: Container(
+          child: Center(
+        child: Image.asset('assets/logo.png',
+            width: 350, // Set the desired width
+            height: 350),
+      )),
+    );
   }
 }

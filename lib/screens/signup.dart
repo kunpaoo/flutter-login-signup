@@ -113,7 +113,7 @@ class LoginInterface extends StatelessWidget {
               color: primary,
               minWidth: double.infinity,
               elevation: 10,
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(15),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5)),
               child: Text(
@@ -127,9 +127,12 @@ class LoginInterface extends StatelessWidget {
                   Navigator.pushNamedAndRemoveUntil(
                       context, '/login', ModalRoute.withName('/'));
                 },
-                child: Text(
+                child: const Text(
                   "Already have an account",
-                  style: TextStyle(color: Colors.grey),
+                  style: TextStyle(
+                      color: Colors.grey,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 12.5),
                 )),
             SizedBox(height: 20),
             Text(
