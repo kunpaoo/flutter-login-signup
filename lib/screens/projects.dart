@@ -9,14 +9,20 @@ class Project {
   final String title;
   final String excerpt;
   final String date;
+  final String imageUrl;
 
-  Project({required this.title, required this.excerpt, required this.date});
+  Project(
+      {required this.title,
+      required this.excerpt,
+      required this.date,
+      required this.imageUrl});
 
   factory Project.fromJson(Map<String, dynamic> json) {
     return Project(
         title: json['title']['rendered'],
         excerpt: json['excerpt']['rendered'],
-        date: json['date']);
+        date: json['date'],
+        imageUrl: json['_links']['wp:featuredmedia'][0]['href']);
   }
 }
 
@@ -51,6 +57,7 @@ class _ProjectsState extends State<Projects> {
         projects = jsonList.map((json) => Project.fromJson(json)).toList();
         isLoading = false;
       });
+
       print(projects[0].title);
     } catch (e) {
       print('Error fetching projects: $e');
@@ -128,6 +135,7 @@ class _ProjectsState extends State<Projects> {
                         title: project.title,
                         excerpt: project.excerpt,
                         date: project.date,
+                        imageUrl: project.imageUrl,
                       );
                     }).toList(),
                   ),
