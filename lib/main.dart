@@ -21,7 +21,7 @@ class MainApp extends StatelessWidget {
           '/': (context) => const LandingPage(),
           '/login': (context) => const LoginPage(),
           '/signup': (context) => const SignupPage(),
-          '/home': (context) => const HomePage(),
+          '/home': (context) => const Projects(),
           '/projects': (context) => const Projects(),
         },
         color: const Color.fromARGB(1, 25, 116, 255),

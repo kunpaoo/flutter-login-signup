@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:midterms/api/fetch_projects.dart';
 import 'package:midterms/card.dart';
 
@@ -113,7 +114,6 @@ class _ProjectsState extends State<Projects> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        padding: EdgeInsets.symmetric(vertical: 80, horizontal: 30),
         decoration: const BoxDecoration(
             gradient: LinearGradient(
           colors: [
@@ -127,17 +127,33 @@ class _ProjectsState extends State<Projects> {
             ? Center(child: CircularProgressIndicator())
             : SingleChildScrollView(
                 child: Center(
-                  child: Wrap(
-                    spacing: 8.0,
-                    runSpacing: 8.0,
-                    children: projects.map((project) {
-                      return ProjectCard(
-                        title: project.title,
-                        excerpt: project.excerpt,
-                        date: project.date,
-                        imageUrl: project.imageUrl,
-                      );
-                    }).toList(),
+                  child: Container(
+                    padding: EdgeInsets.symmetric(vertical: 80, horizontal: 30),
+                    child: Column(
+                      children: [
+                        Text(
+                          "Projects",
+                          style: GoogleFonts.rubik(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w700,
+                              letterSpacing: -0.25,
+                              fontSize: 50),
+                        ),
+                        SizedBox(height: 40),
+                        Wrap(
+                          spacing: 8.0,
+                          runSpacing: 8.0,
+                          children: projects.map((project) {
+                            return ProjectCard(
+                              title: project.title,
+                              excerpt: project.excerpt,
+                              date: project.date,
+                              imageUrl: project.imageUrl,
+                            );
+                          }).toList(),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
