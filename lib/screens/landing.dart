@@ -19,12 +19,14 @@ class LandingPage extends StatelessWidget {
 }
 
 class MobileWidget extends StatelessWidget {
+  const MobileWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: SingleChildScrollView(
       child: Container(
-          padding: EdgeInsets.only(bottom: 80),
+          padding: const EdgeInsets.only(bottom: 80),
           child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               mainAxisSize: MainAxisSize.max,
@@ -44,34 +46,34 @@ class MobileWidget extends StatelessWidget {
                     )),
                 const Padding(
                     padding: EdgeInsets.fromLTRB(30, 20, 30, 20),
-                    child: const Text(
+                    child: Text(
                       textAlign: TextAlign.center,
                       "Explore all the existing job roles based on your interest and study major",
                     )),
-                SizedBox(height: 35),
+                const SizedBox(height: 35),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   RawMaterialButton(
                     onPressed: () {
                       Navigator.pushNamed(context, '/login');
                     },
-                    fillColor: Color.fromRGBO(22, 54, 169, 1),
+                    fillColor: const Color.fromRGBO(22, 54, 169, 1),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8)),
-                    padding: EdgeInsets.fromLTRB(45, 12, 45, 12),
+                    padding: const EdgeInsets.fromLTRB(45, 12, 45, 12),
                     child: const Text("Login",
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w600,
                             fontSize: 16)),
                   ),
-                  SizedBox(width: 30),
+                  const SizedBox(width: 30),
                   RawMaterialButton(
                     onPressed: () {
                       Navigator.pushNamed(context, '/signup');
                     },
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)),
-                    padding: EdgeInsets.fromLTRB(45, 12, 45, 12),
+                    padding: const EdgeInsets.fromLTRB(45, 12, 45, 12),
                     child: const Text("Register",
                         style: TextStyle(
                             color: Colors.black,
@@ -85,6 +87,8 @@ class MobileWidget extends StatelessWidget {
 }
 
 class DesktopWidget extends StatelessWidget {
+  const DesktopWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,7 +100,7 @@ class DesktopWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset('khun.png'),
-              SizedBox(width: 250),
+              const SizedBox(width: 250),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -108,30 +112,30 @@ class DesktopWidget extends StatelessWidget {
                       )),
                   const Text(
                       "Explore all the existing job roles based on your interest and study major"),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Row(children: [
                     RawMaterialButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/login');
                       },
-                      fillColor: Color.fromRGBO(22, 54, 169, 1),
+                      fillColor: const Color.fromRGBO(22, 54, 169, 1),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
-                      padding: EdgeInsets.fromLTRB(60, 15, 60, 15),
+                      padding: const EdgeInsets.fromLTRB(60, 15, 60, 15),
                       child: const Text("Login",
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.w600,
                               fontSize: 16)),
                     ),
-                    SizedBox(width: 50),
+                    const SizedBox(width: 50),
                     RawMaterialButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/signup');
                       },
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
-                      padding: EdgeInsets.fromLTRB(60, 15, 60, 15),
+                      padding: const EdgeInsets.fromLTRB(60, 15, 60, 15),
                       child: const Text("Register",
                           style: TextStyle(
                               color: Colors.black,

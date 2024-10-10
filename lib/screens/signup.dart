@@ -12,9 +12,9 @@ class SignupPage extends StatelessWidget {
         child: ResponsiveBuilder(
           builder: (context, sizingInformation) {
             if (sizingInformation.deviceScreenType == DeviceScreenType.mobile) {
-              return MobileWidget();
+              return const MobileWidget();
             } else {
-              return DesktopWidget();
+              return const DesktopWidget();
             }
           },
         ),
@@ -104,7 +104,7 @@ class LoginInterface extends StatelessWidget {
                     fontSize: 10,
                   )),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             MaterialButton(
               onPressed: () {
                 Navigator.pushNamedAndRemoveUntil(
@@ -113,15 +113,15 @@ class LoginInterface extends StatelessWidget {
               color: primary,
               minWidth: double.infinity,
               elevation: 10,
-              padding: EdgeInsets.all(15),
+              padding: const EdgeInsets.all(15),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5)),
-              child: Text(
+              child: const Text(
                 "Create Account",
                 style: TextStyle(color: Colors.white),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             TextButton(
                 onPressed: () {
                   Navigator.pushNamedAndRemoveUntil(
@@ -134,15 +134,15 @@ class LoginInterface extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       fontSize: 12.5),
                 )),
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               "or continue with",
               style: TextStyle(
                   color: Color.fromRGBO(31, 65, 187, 1),
                   fontSize: 12,
                   fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             SocialIconsWidget(),
           ],
         ),
@@ -154,16 +154,17 @@ class LoginInterface extends StatelessWidget {
 Container InputText(String label, [bool password = false]) {
   return Container(
     width: double.infinity,
-    margin: EdgeInsets.symmetric(vertical: 10),
+    margin: const EdgeInsets.symmetric(vertical: 10),
     child: TextFormField(
-      style: TextStyle(fontSize: 15),
+      style: const TextStyle(fontSize: 15),
       obscureText: password,
       obscuringCharacter: '*',
       decoration: InputDecoration(
-          contentPadding: EdgeInsets.all(15),
+          contentPadding: const EdgeInsets.all(15),
           labelText: label,
-          labelStyle: TextStyle(fontSize: 13),
-          floatingLabelStyle: TextStyle(color: Color.fromRGBO(31, 65, 187, 1)),
+          labelStyle: const TextStyle(fontSize: 13),
+          floatingLabelStyle:
+              const TextStyle(color: Color.fromRGBO(31, 65, 187, 1)),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
             borderSide: const BorderSide(
